@@ -43,6 +43,9 @@ namespace QslBureauCheck
             this.buttonQuery = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelInputBase.SuspendLayout();
             this.panelInputBody.SuspendLayout();
             this.panelInputHead.SuspendLayout();
@@ -58,7 +61,7 @@ namespace QslBureauCheck
             this.panelInputBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInputBase.Location = new System.Drawing.Point(0, 0);
             this.panelInputBase.Name = "panelInputBase";
-            this.panelInputBase.Size = new System.Drawing.Size(502, 566);
+            this.panelInputBase.Size = new System.Drawing.Size(506, 566);
             this.panelInputBase.TabIndex = 0;
             // 
             // panelInputBody
@@ -67,7 +70,7 @@ namespace QslBureauCheck
             this.panelInputBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInputBody.Location = new System.Drawing.Point(0, 49);
             this.panelInputBody.Name = "panelInputBody";
-            this.panelInputBody.Size = new System.Drawing.Size(502, 517);
+            this.panelInputBody.Size = new System.Drawing.Size(506, 517);
             this.panelInputBody.TabIndex = 2;
             // 
             // textInput
@@ -78,17 +81,19 @@ namespace QslBureauCheck
             this.textInput.Multiline = true;
             this.textInput.Name = "textInput";
             this.textInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textInput.Size = new System.Drawing.Size(502, 517);
+            this.textInput.Size = new System.Drawing.Size(506, 517);
             this.textInput.TabIndex = 1;
             this.textInput.WordWrap = false;
             // 
             // panelInputHead
             // 
+            this.panelInputHead.Controls.Add(this.label3);
+            this.panelInputHead.Controls.Add(this.label2);
             this.panelInputHead.Controls.Add(this.buttonLoadFromFIle);
             this.panelInputHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInputHead.Location = new System.Drawing.Point(0, 0);
             this.panelInputHead.Name = "panelInputHead";
-            this.panelInputHead.Size = new System.Drawing.Size(502, 49);
+            this.panelInputHead.Size = new System.Drawing.Size(506, 49);
             this.panelInputHead.TabIndex = 1;
             // 
             // buttonLoadFromFIle
@@ -106,7 +111,7 @@ namespace QslBureauCheck
             this.panelOutputBase.Controls.Add(this.textOutput);
             this.panelOutputBase.Controls.Add(this.panelOutputHead);
             this.panelOutputBase.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOutputBase.Location = new System.Drawing.Point(657, 0);
+            this.panelOutputBase.Location = new System.Drawing.Point(661, 0);
             this.panelOutputBase.Name = "panelOutputBase";
             this.panelOutputBase.Size = new System.Drawing.Size(464, 566);
             this.panelOutputBase.TabIndex = 1;
@@ -125,6 +130,7 @@ namespace QslBureauCheck
             // 
             // panelOutputHead
             // 
+            this.panelOutputHead.Controls.Add(this.label1);
             this.panelOutputHead.Controls.Add(this.buttonSaveToFile);
             this.panelOutputHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOutputHead.Location = new System.Drawing.Point(0, 0);
@@ -134,7 +140,8 @@ namespace QslBureauCheck
             // 
             // buttonSaveToFile
             // 
-            this.buttonSaveToFile.Location = new System.Drawing.Point(8, 8);
+            this.buttonSaveToFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveToFile.Location = new System.Drawing.Point(332, 8);
             this.buttonSaveToFile.Name = "buttonSaveToFile";
             this.buttonSaveToFile.Size = new System.Drawing.Size(120, 30);
             this.buttonSaveToFile.TabIndex = 0;
@@ -145,7 +152,7 @@ namespace QslBureauCheck
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(654, 0);
+            this.splitter1.Location = new System.Drawing.Point(658, 0);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(3, 566);
             this.splitter1.TabIndex = 3;
@@ -155,7 +162,7 @@ namespace QslBureauCheck
             // 
             this.panelCenter.Controls.Add(this.buttonQuery);
             this.panelCenter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelCenter.Location = new System.Drawing.Point(502, 0);
+            this.panelCenter.Location = new System.Drawing.Point(506, 0);
             this.panelCenter.Name = "panelCenter";
             this.panelCenter.Size = new System.Drawing.Size(152, 566);
             this.panelCenter.TabIndex = 4;
@@ -179,11 +186,39 @@ namespace QslBureauCheck
             // 
             this.saveFileDialog1.Filter = "ADIFファイル|*.adi|Cabrilloファイル|*.CBR|すべてのファイル|*.*";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("ＭＳ Ｐゴシック", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(6, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "転送可";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("ＭＳ Ｐゴシック", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(385, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "元ファイル";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(134, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(221, 24);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "ADIFまたはCabrilloファイルを読み込むか貼り付けして下さい。";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 566);
+            this.ClientSize = new System.Drawing.Size(1125, 566);
             this.Controls.Add(this.panelInputBase);
             this.Controls.Add(this.panelCenter);
             this.Controls.Add(this.splitter1);
@@ -195,9 +230,11 @@ namespace QslBureauCheck
             this.panelInputBody.ResumeLayout(false);
             this.panelInputBody.PerformLayout();
             this.panelInputHead.ResumeLayout(false);
+            this.panelInputHead.PerformLayout();
             this.panelOutputBase.ResumeLayout(false);
             this.panelOutputBase.PerformLayout();
             this.panelOutputHead.ResumeLayout(false);
+            this.panelOutputHead.PerformLayout();
             this.panelCenter.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -219,6 +256,9 @@ namespace QslBureauCheck
         private System.Windows.Forms.Button buttonQuery;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

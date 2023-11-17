@@ -65,6 +65,8 @@ namespace QslBureauCheck
             TJarlMemberInfoList list = new TJarlMemberInfoList();
             formMemberCheck f = new formMemberCheck();
 
+            this.Enabled = false;
+
             c = 0;
             list.Clear();
 
@@ -140,8 +142,11 @@ namespace QslBureauCheck
                 }
             }
 
-            textOutput.AppendText("-------------------------------------" + Environment.NewLine); 
-            textOutput.AppendText("転送可=" + ok.ToString() + " 転送不可=" + ng.ToString() + " JA局=" + ja.ToString() + " DX局=" + dx.ToString() + Environment.NewLine); 
+            this.Enabled = true;
+
+            string s = "JARL会員情報の照会が終わりました。" + Environment.NewLine +
+                       "転送可=" + ok.ToString() + " 転送不可=" + ng.ToString() + " / JA局=" + ja.ToString() + " DX局=" + dx.ToString();
+            MessageBox.Show(this, s, "JARL Member Info.", MessageBoxButtons.OK, MessageBoxIcon.Information);
              
             f.Dispose();
         }

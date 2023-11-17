@@ -23,33 +23,9 @@ namespace QslBureauCheck
         {
             m_fDocumentComplete = true;
         }
-/*
-        private void buttonQuery_Click(object sender, EventArgs e)
-        {
-            int i;
-            StringBuilder sb = new StringBuilder();
-
-            string[] callarray = textBox1.Text.Split(',');
-
-            TJarlMemberInfoList list = new TJarlMemberInfoList();
-
-            for (i = 0; i < callarray.Length; i++) {
-                list.Add(new TJarlMemberInfo(callarray[i], false, false));
-            }
-
-            QueryMemberInfo(list);
-
-            for (i = 0; i < list.Count; i++) {
-                sb.Append(list[i].Callsign + " " + list[i].Transfer + " " + list[i].JarlMember + "\r\n");
-            }
-
-            textBox2.Text = sb.ToString();
-        }
-*/
 
         public int QueryMemberInfo(TJarlMemberInfoList list)
         {
-            IHTMLDocument2 Doc2;
             IHTMLDocument3 Doc3;
             IHTMLInputElement element;
             IHTMLElement ele1;
@@ -76,9 +52,6 @@ namespace QslBureauCheck
 
             Doc3.getElementById("txtCallSign").innerText = strCallsign;
 
-            Doc2 = (IHTMLDocument2)webBrowser1.Document.DomDocument;
-
-//            element = (IHTMLInputElement)Doc2.all.item("btnSearch", 0);
             element = (IHTMLInputElement)Doc3.getElementById("btnSearch");
 
             m_fDocumentComplete = false;
