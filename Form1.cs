@@ -84,7 +84,7 @@ namespace QslBureauCheck
                     continue;
                 }
 
-                callsign = ExtractCallsign(line);
+                callsign = ExtractCallsign(line.ToUpper());
                 if (callsign == "")
                 {
                     textOutput.AppendText(line + Environment.NewLine);
